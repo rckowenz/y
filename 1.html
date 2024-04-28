@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...</title>
+    <link rel="stylesheet" href="css/99.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta content="#8B0000" data-react-helmet="true" name="theme-color"/>
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+    <body>
+        <article onclick="showFullText()">
+            <div id="entireText" style="display: none;">
+                love. it matters a lot to me, but i wonder what does it mean to other people. i wonder if it really matters to them. 
+                THEM in this sense is pointing towards one person, the person i admired so much, the person who changed who i am as a person. 
+                i s=till think about him even after he rejected me 3 times, notin some sense where he just said he didnt like me... what if he did, 
+                i mean i could've been a chance that he cared about me. i wonder why am i like this... love takes a toll on me, when i fall in love 
+                i deeply flal in love, to the epoint hwere im obessive and attached to people. it's something i need to work on. but with this guy, 
+                m#$%#!@@#made me happy, i somehow fell in love w him, but i dont have a reason why i did, or even how it happened. he didnt pay any type of 
+                attention to me, i just admired him from afar,, and i guess that was icky to him. it seems like it was... i hope it wasnt. i still think about him, 
+                its been a while i had a crush, i had a crush since august. thats my birth month :D. it just never got this bad, i got freaking bad this year. 
+                the way i would admire everything about him. i even started l;istening to his msuic in hopes he would fall for me. its whatever, 
+                he has commiment issues mayeb thats the problem. or he just doesnt want to seem like a pedophile. 4 years isnt bad. hes turning 20 this year. 
+                thats pretty old but... its ok, i didnt want to pay attention and focus on his age. i focused mainly upon him,... i wish he saw the way i loved on him lol.
+                it sucks, i wrote him so many <a href="etc/letters.html">paragraphs</a> :c i wish he gave me a chance. I really do but guess what, its okay. i juist cant fall in love w someone else. 
+                i truly felt love for thje first time, but who really cares lol. for some reason, whedn i speak about him and describe him i just get so soft, i just... cant descrie him.
+            </div>
+            <div id="typingContainer">
+                <div id="typingText" class="typing-animation"></div>
+            </div>
+            <div class="volume-control">
+                <input type="range" min="0" max="1" step="0.1" value="0.3" onchange="changeVolume(this.value)">
+            </div>
+        </article>
+        <audio id="backgroundMusic" src="media/pt.mp3" preload="auto" volume="0.6"loop></audio>
+        <script>
+            function showFullText() {
+            document.getElementById("typingText").textContent = document.getElementById("typingText").textContent;
+        }
+            var text = document.getElementById("entireText").textContent.trim();
+            var typingSpeed = 50;
+    
+            var charIndex = 0;
+            var typingInterval = setInterval(function() {
+                document.getElementById("typingText").textContent += text[charIndex++];
+                document.getElementById("backgroundMusic").play(); 
+                if (charIndex >= text.length) {
+                    clearInterval(typingInterval);
+                }
+            }, typingSpeed);
+
+            function showFullText() {
+            clearInterval(typingInterval); 
+            document.getElementById("typingText").textContent = text; 
+        }
+        
+        function changeVolume(volume) {
+            document.getElementById("backgroundMusic").volume = volume;
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --font1: 'Lato', sans-serif;
+    --font2: 'Roboto Mono', monospace;
+    --bg: black;
+    --white: #ffffff;
+    --off-white: #dedede;
+    --grey: #a6a6a6;
+}
+
+.bg {
+    color: black;
+    color: var(--bg);
+}
+
+.white {
+    color: #ffffff;
+    color: var(--white);
+}
+
+.off-white {
+    color: #dedede;
+    color: var(--off-white);
+}
+
+.grey {
+    color: #a6a6a6;
+    color: var(--grey);
+}
+
+.font1 {
+    font-family: 'Lato', sans-serif; 
+}
+
+.font2 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+}
+
+::selection {
+    background-color: var(--white); 
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: 4px; 
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--white); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
